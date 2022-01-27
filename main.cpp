@@ -1,9 +1,8 @@
 #include <iostream>
 
 class Animal {
-    std::string im;
+
 public:
-    Animal(std::string inIm) : im(inIm) {}
 
     virtual ~Animal() {}
 
@@ -11,14 +10,11 @@ public:
 
     void virtual voiceAggressive() = 0;
 
-    std::string whoIm() {
-        return im;
-    }
 };
 
 class Dog : public Animal {
+
 public:
-    Dog() : Animal("dog") {}
 
     virtual ~Dog() {}
 
@@ -32,8 +28,8 @@ public:
 };
 
 class Cat : public Animal {
+
 public:
-    Cat() : Animal("cat") {}
 
     virtual ~Cat() {}
 
@@ -48,9 +44,7 @@ public:
 
 void meeting(Animal *a, Animal *b) {
 
-    std::cout << a->whoIm() << " + " << b->whoIm() << " = ";
-
-    if (a->whoIm() == b->whoIm()) {
+    if (static_cast<Dog*>(a) == static_cast<Dog*>(b)) {
         a->voiceAggressive();
         std::cout << " ";
         b->voiceAggressive();

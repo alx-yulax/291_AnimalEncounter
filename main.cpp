@@ -44,7 +44,7 @@ public:
 
 void meeting(Animal *a, Animal *b) {
 
-    if (static_cast<Dog*>(a) == static_cast<Dog*>(b)) {
+    if (a == b) {
         a->voiceAggressive();
         std::cout << " ";
         b->voiceAggressive();

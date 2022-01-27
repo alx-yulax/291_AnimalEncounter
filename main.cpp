@@ -14,11 +14,11 @@ class Dog : public Animal {
 
 public:
 
-    void virtual voiceDefault() {
+    void voiceDefault() {
         std::cout << "Bark";
     }
 
-    void virtual voiceAggressive() {
+    void voiceAggressive() {
         std::cout << "Woof";
     }
 };
@@ -27,11 +27,11 @@ class Cat : public Animal {
 
 public:
 
-    void virtual voiceDefault() {
+    void  voiceDefault() {
         std::cout << "Meow";
     }
 
-    void virtual voiceAggressive() {
+    void  voiceAggressive() {
         std::cout << "Purr";
     }
 };

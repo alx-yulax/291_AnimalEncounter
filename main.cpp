@@ -4,8 +4,6 @@ class Animal {
 
 public:
 
-    virtual ~Animal() {}
-
     void virtual voiceDefault() = 0;
 
     void virtual voiceAggressive() = 0;
@@ -15,8 +13,6 @@ public:
 class Dog : public Animal {
 
 public:
-
-    virtual ~Dog() {}
 
     void virtual voiceDefault() {
         std::cout << "Bark";
@@ -30,8 +26,6 @@ public:
 class Cat : public Animal {
 
 public:
-
-    virtual ~Cat() {}
 
     void virtual voiceDefault() {
         std::cout << "Meow";

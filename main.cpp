@@ -27,18 +27,18 @@ class Cat : public Animal {
 
 public:
 
-    void  voiceDefault() {
+    void voiceDefault() {
         std::cout << "Meow";
     }
 
-    void  voiceAggressive() {
+    void voiceAggressive() {
         std::cout << "Purr";
     }
 };
 
 void meeting(Animal *a, Animal *b) {
-
-    if (a == b) {
+    if (((dynamic_cast<Dog *>(a) != nullptr) && (dynamic_cast<Dog *>(b) != nullptr)) ||
+        ((dynamic_cast<Cat *>(a) != nullptr) && (dynamic_cast<Cat *>(b) != nullptr))) {
         a->voiceAggressive();
         std::cout << " ";
         b->voiceAggressive();
@@ -47,6 +47,7 @@ void meeting(Animal *a, Animal *b) {
         std::cout << " ";
         b->voiceDefault();
     }
+
     std::cout << std::endl;
 }
 
